@@ -1,0 +1,104 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* #frame {
+  border: 25px solid white;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: 12px;
+  box-shadow: 10px 10px 20px black, 0px 0px 4px 1px #ccc inset;
+  width: 540px;
+  height: 540px;
+  position: fixed;
+}
+
+#frame--screen {
+  outline-style: solid;
+  outline-color: rgb(21, 21, 21);
+  outline-width: 12px;
+  background-color: black;
+  box-shadow: 10px 10px 10px black, 0px 0px 4px 1px black inset;
+  width: 500px;
+  height: 500px;
+  position: fixed;
+} */
+
+#canvas {
+  width: 500px;
+  height: 500px;
+}
+
+#frame #canvas {
+  padding: 20px;
+}
+
+.color-display {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  height: 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.color-display:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  content: "";
+}
+
+.color-display div {
+  width: 30px;
+  height: 30px;
+  margin: 0 0px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin-right: 3px; */
+}
+
+.color-display div:first-child {
+}
+
+.shaky {
+  animation-name: shakeAnim;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes shakeAnim {
+  0% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-3px);
+  }
+  10% {
+    transform: translateX(3px);
+  }
+  15% {
+    transform: translateX(-8px);
+  }
+  20% {
+    transform: translateX(8px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  30% {
+    transform: translateX(3px);
+  }
+  35% {
+    transform: translateX(0);
+  }
+}
